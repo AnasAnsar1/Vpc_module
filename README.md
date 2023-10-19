@@ -42,6 +42,8 @@ module "vpc" {
 ---
 
 ### Public Subnet
+**public_subnet_id** == ID of public subnet.
+
 **public_subnet_count** == Count of subnets.
 
 **public_subent_az** == Availability zone of subnets.
@@ -53,6 +55,8 @@ module "vpc" {
 ---
 
 ### Private Subnet
+**private_subnet_id** == ID of private subnet.
+
 **private_subnet_count** == Count of subnets.
 
 **private_subent_az** == Availability zone of subnets.

@@ -19,48 +19,56 @@ output "vpc_name" {
 
 #Public Subnet
 output "public_subnet_count" {
-  value = aws_subnet.ec2_vpc_public_subnets.count
+  value = aws_subnet.ec2_vpc_public_subnets[*].tags
 }
 
 output "public_subent_az" {
-  value = aws_subnet.ec2_vpc_public_subnets.availability_zone
+  value = aws_subnet.ec2_vpc_public_subnets[*].availability_zone
 }
 
 output "public_subent_cidr_block" {
-  value = aws_subnet.ec2_vpc_public_subnets.cidr_block
+  value = aws_subnet.ec2_vpc_public_subnets[*].cidr_block
 }
 
 output "public_subnet_names" {
-  value = aws_subnet.ec2_vpc_public_subnets.tags.Name[count.index]
+  value = aws_subnet.ec2_vpc_public_subnets[*].tags.Name[*]
+}
+
+output "public_subnet_id" {
+  value = aws_subnet.ec2_vpc_public_subnets[*].id
 }
 
 
 
 #Private Subnet
 output "private_subnet_count" {
-  value = aws_subnet.ec2_vpc_private_subnets.count
+  value = aws_subnet.ec2_vpc_private_subnets[*].count
 }
 
 output "private_subent_az" {
-  value = aws_subnet.ec2_vpc_private_subnets.availability_zone
+  value = aws_subnet.ec2_vpc_private_subnets[*].availability_zone
 }
 
 output "private_subent_cidr_block" {
-  value = aws_subnet.ec2_vpc_private_subnets.cidr_block
+  value = aws_subnet.ec2_vpc_private_subnets[*].cidr_block
 }
 
 output "private_subnet_names" {
-  value = aws_subnet.ec2_vpc_private_subnets.tags.Name[count.index]
+  value = aws_subnet.ec2_vpc_private_subnets[*].tags.Name[*]
+}
+
+output "private_subnet_id" {
+  value = aws_subnet.ec2_vpc_private_subnets[*].id
 }
 
 
 
 #Internet gateway
 output "internet_gateway_name" {
-  value = aws_internet_gateway.ec2_vpc_igway.tags
+  value = aws_internet_gateway.ec2_vpc_igway[*].tags
 }
 output "internet_gateway_id" {
-  value = aws_internet_gateway.ec2_vpc_igway.id
+  value = aws_internet_gateway.ec2_vpc_igway[*].id
 }
 
 
