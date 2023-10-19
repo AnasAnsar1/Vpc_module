@@ -66,7 +66,7 @@ module "vpc" {
 ### Internet gateway
 **internet_gateway_name** == Name of Internet gateway.
 
-**internet Gateway_id** == ID of Internet gateway.
+**internet_gateway_id** == ID of Internet gateway.
 
 ---
 

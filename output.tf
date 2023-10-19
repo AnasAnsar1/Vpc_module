@@ -59,7 +59,7 @@ output "private_subnet_names" {
 output "internet_gateway_name" {
   value = aws_internet_gateway.ec2_vpc_igway.tags
 }
-output "internet Gateway_id" {
+output "internet_gateway_id" {
   value = aws_internet_gateway.ec2_vpc_igway.id
 }
 
