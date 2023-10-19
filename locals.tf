@@ -8,13 +8,13 @@ locals {
 
 
   #Public Subnet
-  public_subnet_count = length(var.Public_Subnet_info)
+  public_subnet_count = length(var.Public_Subnet_name)
   public_subnet_az    = format("%sa", var.region)
   public_subnet_cidr  = cidrsubnet(aws_vpc.ec2_vpc.cidr_block, 8, 1)
 
 
   #Private Subnet
-  Private_subnet_count = length(var.Private_Subnet_info)
+  Private_subnet_count = length(var.Private_Subnet_name)
   private_subnet_az    = format("%sa", var.region)
   private_subnet_cidr  = cidrsubnet(aws_vpc.ec2_vpc.cidr_block, 8, 2)
 
@@ -24,13 +24,13 @@ locals {
 
 
   #Public Route table subnet association
-  Public_rts_count = length(var.Public_Subnet_info)
+  Public_rts_count = length(var.Public_Subnet_name)
 
 
   #Private Route table subnet association
-  Private_rts_count = length(var.Private_Subnet_info)
+  Private_rts_count = length(var.Private_Subnet_name)
 
   #Internet gway
-  Igway_count = length(var.Internet_gateway_info)
+  Igway_count = length(var.Internet_gateway_name)
   
 }

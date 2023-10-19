@@ -18,19 +18,19 @@ variable "vpc_info" {
   }
 }
 
-variable "Public_Subnet_info" {
+variable "Public_Subnet_name" {
   type = list(string)
 
   default = ["Public_subnet_1"]
 }
 
-variable "Private_Subnet_info" {
+variable "Private_Subnet_name" {
   type = list(string)
 
   default = ["Private_subnet_1"]
 }
 
-variable "Internet_gateway_info" {
+variable "Internet_gateway_name" {
   type = list(string)
 
   default = ["ec2_vpc_igway"]

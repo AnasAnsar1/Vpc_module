@@ -18,7 +18,7 @@ resource "aws_subnet" "ec2_vpc_public_subnets" {
   map_public_ip_on_launch = "true"
 
   tags = {
-    Name = var.Public_Subnet_info[count.index]
+    Name = var.Public_Subnet_name[count.index]
   }
 }
 
@@ -31,7 +31,7 @@ resource "aws_subnet" "ec2_vpc_private_subnets" {
   map_public_ip_on_launch = "false"
 
   tags = {
-    Name = var.Private_Subnet_info[count.index]
+    Name = var.Private_Subnet_name[count.index]
   }
 }
 
@@ -42,7 +42,7 @@ resource "aws_internet_gateway" "ec2_vpc_igway" {
   count = local.Igway_count
 
   tags = {
-    Name = var.Internet_gateway_info[count.index]
+    Name = var.Internet_gateway_name[count.index]
   }
 
 }

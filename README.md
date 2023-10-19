@@ -15,11 +15,11 @@ module "vpc" {
     enable_dns_support = "true"
   }
 
-  Public_Subnet_info    = ["terra_ec2_Public_subnet_1"]
+  Public_Subnet_name    = ["terra_ec2_Public_subnet_1"]
 
-  Private_Subnet_info   = ["terra_ec2_Private_subnet_1"]
+  Private_Subnet_name   = ["terra_ec2_Private_subnet_1"]
 
-  Internet_gateway_info = ["terra_ec2_vpc_igway"]
+  Internet_gateway_name = ["terra_ec2_vpc_igway"]
 
   Public_rt_name        = "Public_rt"
 
