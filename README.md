@@ -1,8 +1,7 @@
 ## Vpc Module Usage.
 
 ```HCL
-
-module "vpc" {
+module "less_vpc" {
   
   source = "git::https://github.com/AnasAnsar1/Vpc_module.git"
 
