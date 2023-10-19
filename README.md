@@ -29,7 +29,6 @@ module "less_vpc" {
 
 # Outputs
 
----
 ### VPC
 
 **vpc_id** == ID of the vpc.
