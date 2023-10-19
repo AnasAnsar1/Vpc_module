@@ -42,7 +42,7 @@ output "public_subnet_id" {
 
 #Private Subnet
 output "private_subnet_count" {
-  value = aws_subnet.ec2_vpc_private_subnets[*].count
+  value = aws_subnet.ec2_vpc_private_subnets[*].tags
 }
 
 output "private_subent_az" {
