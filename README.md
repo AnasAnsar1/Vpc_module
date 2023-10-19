@@ -27,7 +27,6 @@ module "less_vpc" {
 }
 ```
 
-```md
 # Outputs
 
 ---
@@ -79,5 +78,3 @@ module "less_vpc" {
 
 ### Private route table
 ***Private_rt_id** | ID of private route table.
-
-```
