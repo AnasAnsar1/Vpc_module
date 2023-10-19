@@ -1,2 +1,29 @@
-# Vpc_module
-Vpc module for terraform.
+## Vpc Module Usage.
+
+```HCL
+
+module "vpc" {
+  
+  source = "git::https://github.com/AnasAnsar1/Vpc_module.git"
+
+  region = "ap-south-1"
+
+  vpc_info = {
+    cidr_block         = "10.0.0.0/16"
+    tags               = "terra_ec2_vpc"
+    instance_tenancy   = "default"
+    enable_dns_support = "true"
+  }
+
+  Public_Subnet_info    = ["terra_ec2_Public_subnet_1"]
+
+  Private_Subnet_info   = ["terra_ec2_Private_subnet_1"]
+
+  Internet_gateway_info = ["terra_ec2_vpc_igway"]
+
+  Public_rt_name        = "Public_rt"
+
+  Private_rt_name       = "Private_rt"
+
+}
+```
