@@ -35,7 +35,7 @@ module "vpc" {
 
 **vpc_cidr_block** == Cidr block of vpc.
 
-**main_route_table_id** == ID of the main route table associated vpc.
+**main_route_table_id** == ID of the main route table associated with vpc.
 
 **vpc_name** == Name of vpc.
 
